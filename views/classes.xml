@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <record id='classes_tree_view' model='ir.ui.view'>
+        <field name="name">school.classes.tree</field>
+        <field name="model">school.classes</field>
+        <field name="arch" type="xml">
+            <tree string="Classes">
+              <field name="name"/>
+              <field name="teacher_ids"/>
+              <field name="students_id"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id='classes_form_view' model='ir.ui.view'>
+        <field name="name">school.classes.form</field>
+        <field name="model">school.classes</field>
+        <field name="arch" type="xml">
+            <form string="Classes">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="information"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" string=" Turma:"/>
+                            <field name="teacher_ids" widget="many2many_tags"/>
+
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Alunos">
+                            <field name="students_id"/>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <record id='matter_tree_view' model='ir.ui.view'>
+        <field name="name">school.matter.tree</field>
+        <field name="model">school.matter</field>
+        <field name="arch" type="xml">
+            <tree string="Matter">
+              <field name="name"/>
+              <field name="time"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='matter_form_view' model='ir.ui.view'>
+        <field name="name">school.matter.form</field>
+        <field name="model">school.matter</field>
+        <field name="arch" type="xml">
+            <form string="Matter">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="information"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" string="Nome:"/>
+                            <field name="time" string="Carga horária:"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

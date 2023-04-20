@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <record id='teacher_tree_view' model='ir.ui.view'>
+        <field name="name">school.teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree string="Teacher">
+              <field name="name"/>
+                <field name="age"/>
+                <field name="birth_date"/>
+                <field name="identity"/>
+                <field name="gender"/>
+                <field name="matter_id"/>
+                <field name="hour_shift" string="Período"/>
+                <field name="mother_name"/>
+                <field name="father_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='teacher_form_view' model='ir.ui.view'>
+        <field name="name">school.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Teacher">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="information"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" string="Nome:"/>
+                            <field name="age" string="Idade:"/>
+                            <field name="birth_date" string="Data de aniversário:"/>
+                            <field name="identity" string="CPF:"/>
+                            <field name="gender" string="Gênero"/>
+                        </group>
+
+                        <group>
+                            <field name="matter_id" string="Matéria:"/>
+                            <field name="hour_shift" string="Período"/>
+                            <field name="mother_name" string="Nome da mãe:"/>
+                            <field name="father_name" string="Nome do pai:"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

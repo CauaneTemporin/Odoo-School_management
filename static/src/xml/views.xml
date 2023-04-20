@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+
+        <record id="classes_menu_url" model="website.menu">
+            <field name="name">Turmas</field>
+            <field name="url">/classes</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">50</field>
+        </record>
+
+        <record id="teacher_menu_url" model="website.menu">
+            <field name="name">Professor</field>
+            <field name="url">/teacher</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">51</field>
+        </record>
+
+        <record id="matter_menu_url" model="website.menu">
+            <field name="name">Matérias</field>
+            <field name="url">/matter</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">52</field>
+        </record>
+
+    </data>
+</odoo>

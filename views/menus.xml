@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <menuitem id="school_root_menu"
+              name="Escola"
+              web_icon="school_management,static/description/icon.png"
+              sequence="7"/>
+
+    <menuitem id="school_student_menu"
+              name="Alunos" action="action_school_student_form_view"
+              parent="school_root_menu"
+              sequence="10"/>
+
+    <menuitem id="school_teacher_menu"
+              name="Professores" action="action_school_teacher_form_view"
+              parent="school_root_menu"
+              sequence="11"/>
+
+    <menuitem id="school_matter_menu"
+              name="Matérias" action="action_school_matter_form_view"
+              parent="school_root_menu"
+              sequence="12"/>
+
+     <menuitem id="school_classes_menu"
+              name="Turma" action="action_school_classes_form_view"
+              parent="school_root_menu"
+              sequence="12"/>
+</odoo>

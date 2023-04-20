@@ -1,0 +1,83 @@
+<odoo>
+
+    <template id="classes_data" name="classes">
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <ul class="nav navbar-nav ml-auto text-right" id="top_menu">
+                        <li class="nav-item"></li>
+                        <li class="nav-item">
+                            <a role="menuitem" href="/jobs" class="nav-link ">
+                                <span data-oe-expression="submenu.name">Classes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="card" style="background-color: #DCDCDC">
+                    <div class="card-title">
+                        <br></br>
+                        <h5 class="card-title">Turma:</h5>
+                        <p class="card-text">Conheça a turma desse semestre:</p>
+                        <p class="card-text">
+                            <small class="text-muted">Atualizado em 2023</small>
+                        </p>
+                        <img class="image" src="/school_management/static/src/image/classes.png"/>
+                    </div>
+                </div>
+
+                <div class="school.classes" id="classes_tab">
+                    <br/>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <t t-foreach="records" t-as="classe">
+                                <a class="nav-item nav-link" t-attf-id="nav-{{classe.id}}-tab" data-toggle="tab"
+                                   t-attf-href="#nav-{{classe.id}}"
+                                   role="tab" t-attf-aria-controls="nav-{{classe.id}}" aria-selected="false">
+                                    <t t-esc="classe.name"/>
+                                    -
+                                    <t t-esc="classe.teacher_ids.name"/>
+                                </a>
+                            </t>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <t t-foreach="records" t-as="classe">
+                            <div class="tab-pane fade" t-attf-id="nav-{{classe.id}}" role="tabpanel"
+                                 t-attf-aria-labelledby="nav-{{classe.id}}-tab">
+
+                                <table class="table table-bordered" style="float: left;">
+                                    <thead style="font-size: 12px; background-color:#e8eaea; white-space:nowrap; text-align: center; vertical-align: middle;">
+                                        <th>
+                                            Nome
+                                        </th>
+                                        <th>
+                                            Gênero
+                                        </th>
+                                        <th>
+                                            Nota geral
+                                        </th>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <t t-foreach="classe.students_id" t-as="student">
+                                            <tr>
+                                                <td t-esc="student.name"/>
+                                                <td t-esc="student.gender"/>
+                                                <td t-esc="student.general_grade"/>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </t>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </t>
+    </template>
+</odoo>

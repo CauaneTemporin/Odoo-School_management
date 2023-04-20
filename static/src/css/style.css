@@ -1,0 +1,22 @@
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card p {
+    color: #4F4F4F;
+    font-size: 16px;
+}
+
+.image {
+    justify-content:left;
+    width: 50px;
+    height: 50px;
+}

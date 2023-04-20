@@ -1,0 +1,59 @@
+<odoo>
+
+    <template id="matter_data" name="matter">
+
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <ul class="nav navbar-nav ml-auto text-right" id="top_menu">
+                    <li class="nav-item"> </li>
+                    <li class="nav-item">
+                        <a role="menuitem" href="/jobs" class="nav-link ">
+                            <span data-oe-expression="submenu.name">Matérias</span>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+                <div class="card" style="background-color: #DCDCDC">
+                  <div class="card-title">
+                    <br></br>
+                    <h5 class="card-title">Matérias:</h5>
+                    <p class="card-text">Conheça as matérias desse semestre:</p>
+                    <p class="card-text"><small class="text-muted">Atualizado em 2023</small></p>
+                    <img class="image" src="/school_management/static/src/image/matter.png"/>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="myTabMatter">
+
+                    <div class="school.matter" id="matter_tab">
+                        <br/>
+                        <table class="table table-bordered" style="float: left;">
+                            <thead style="font-size: 12px; background-color:#e8eaea; white-space:nowrap; text-align: center; vertical-align: middle;">
+                                <th>
+                                    Matéria
+                                </th>
+                                <th>
+                                    Carga horária
+                                </th>
+                            </thead>
+
+                            <tbody>
+                                 <t t-foreach="records" t-as="matter">
+                                    <tr>
+                                        <td t-esc="matter.name"/>
+
+                                        <td t-esc="matter.time"/>
+                                    </tr>
+                                 </t>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </t>
+
+    </template>
+
+</odoo>

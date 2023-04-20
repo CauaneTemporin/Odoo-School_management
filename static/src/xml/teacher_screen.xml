@@ -1,0 +1,58 @@
+<odoo>
+
+    <template id="teacher_data" name="teacher">
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <ul class="nav navbar-nav ml-auto text-right" id="top_menu">
+                    <li class="nav-item"> </li>
+                    <li class="nav-item">
+                        <a role="menuitem" href="/jobs" class="nav-link ">
+                            <span data-oe-expression="submenu.name">Professores</span>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+
+                <div class="card" style="background-color: #DCDCDC">
+                  <div class="card-title">
+                    <br></br>
+                    <h5 class="card-title">Professor(a):</h5>
+                    <p class="card-text">Conheça os professores desse bimestre:</p>
+                    <p class="card-text"><small class="text-muted">Atualizado em 2023</small></p>
+                    <img class="image" src="/school_management/static/src/image/teacher.png"/>
+                  </div>
+                </div>
+
+                <div class="school.teacher" id="teacher_tab">
+                        <br/>
+                        <table class="table table-bordered" style="float: left;">
+                            <thead style="font-size: 12px; background-color:#e8eaea; white-space:nowrap; text-align: center; vertical-align: middle;">
+                                <th>
+                                    Professor
+                                </th>
+                                <th>
+                                    Período
+                                </th>
+                                <th>
+                                    Matéria
+                                </th>
+                            </thead>
+
+                            <tbody>
+                                 <t t-foreach="records" t-as="teacher">
+                                    <tr>
+                                        <td t-esc="teacher.name"/>
+
+                                        <td t-esc="teacher.hour_shift"/>
+
+                                        <td t-esc="teacher.matter_id.name"/>
+                                    </tr>
+                                 </t>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

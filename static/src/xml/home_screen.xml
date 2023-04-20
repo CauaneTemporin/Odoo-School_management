@@ -1,0 +1,29 @@
+<odoo>
+
+    <template id="home_page_inherit" name="home_page" inherit_id="website.homepage">
+
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div class="oe_website_login_container">
+                <form class="oe_login_form" role="form" method="post"
+                      onsubmit="this.action = this.action + location.hash" action="/web/login">
+
+                    <h2>Faculdade Lliege</h2>
+                    <br></br>
+                    <h4>Bem vindo ao portal do aluno</h4>
+                    <br></br>
+
+                    <div class="form-group field-login">
+                        <label for="login">CPF</label>
+                        <input type="text" placeholder="CPF" name="cpf" id="cpf" required="required"
+                               autofocus="autofocus" autocapitalize="off" class="form-control "/>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>

@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_student,school.student,model_school_student,base.group_user,1,1,1,1
+access_student_portal,school.student,model_school_student,base.group_portal,1,0,0,0
+access_teacher,school.teacher,model_school_teacher,base.group_user,1,1,1,1
+access_teacher_portal,school.teacher,model_school_teacher,base.group_portal,1,0,0,0
+access_matter,school.matter,model_school_matter,base.group_user,1,1,1,1
+access_matter_portal,school.matter,model_school_matter,base.group_portal,1,0,0,0
+access_classes,school.classes,model_school_classes,base.group_user,1,1,1,1
+access_classes_portal,school.classes,model_school_classes,base.group_portal,1,0,0,0
+access_grades,school.grades,model_school_grades,base.group_user,1,1,1,1
+access_grades_portal,school.grades,model_school_grades,base.group_portal,1,0,0,0
+

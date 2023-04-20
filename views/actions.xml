@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <record id="action_school_student_form_view" model="ir.actions.act_window">
+        <field name="name">Alunos</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_school_teacher_form_view" model="ir.actions.act_window">
+        <field name="name">Professores</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_school_matter_form_view" model="ir.actions.act_window">
+        <field name="name">Matérias</field>
+        <field name="res_model">school.matter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_school_classes_form_view" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="res_model">school.classes</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
